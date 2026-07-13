@@ -1,0 +1,567 @@
+/* ===============================
+   PREMIUM BIRTHDAY CSS - PART 1
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff;
+}
+
+/* Galaxy Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,215,0,.25),transparent 25%),
+    radial-gradient(circle at 80% 30%,rgba(0,150,255,.2),transparent 30%),
+    radial-gradient(circle at 50% 80%,rgba(255,0,120,.15),transparent 30%),
+    linear-gradient(#02020d,#000);
+    animation:bgMove 18s linear infinite;
+    z-index:-5;
+}
+
+@keyframes bgMove{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+/* Container */
+
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    width:90%;
+}
+
+/* Happy Birthday */
+
+.title{
+    font-size:4rem;
+    color:#FFD700;
+    text-transform:uppercase;
+    letter-spacing:8px;
+    text-shadow:
+    0 0 15px gold,
+    0 0 35px orange,
+    0 0 60px yellow;
+    animation:titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow{
+
+0%{
+text-shadow:
+0 0 10px gold,
+0 0 20px orange;
+}
+
+100%{
+text-shadow:
+0 0 25px gold,
+0 0 50px orange,
+0 0 90px yellow;
+}
+
+}
+
+/* Name */
+
+.name{
+
+font-size:6rem;
+font-weight:700;
+
+margin-top:20px;
+
+background:linear-gradient(90deg,
+#fff,
+gold,
+orange,
+gold,
+#fff);
+
+background-size:400%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:
+shine 5s linear infinite,
+zoomName 3s ease infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:400%;
+}
+
+}
+
+@keyframes zoomName{
+
+0%{
+transform:scale(.8);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(.8);
+}
+
+}
+
+/* Message */
+
+.message{
+
+margin-top:25px;
+
+font-size:1.3rem;
+
+color:#ffffff;
+
+line-height:35px;
+
+text-shadow:0 0 10px white;
+
+animation:fadeText 4s infinite;
+
+}
+
+@keyframes fadeText{
+
+0%,100%{
+opacity:1;
+}
+
+50%{
+opacity:.5;
+}
+
+}
+
+/* Button */
+
+#playBtn{
+
+margin-top:40px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:50px;
+
+background:gold;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:
+0 0 20px gold;
+
+}
+
+#playBtn:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 40px gold,
+0 0 80px orange;
+
+}
+/* ===============================
+   PREMIUM CSS - PART 2
+================================ */
+
+/* Floating Balloons */
+
+.balloons{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.balloons span{
+    position:absolute;
+    bottom:-180px;
+    width:70px;
+    height:90px;
+    border-radius:50%;
+    animation:floatBalloon linear infinite;
+    box-shadow:0 0 25px rgba(255,255,255,.4);
+}
+
+.balloons span::before{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:70px;
+    background:#ddd;
+    left:50%;
+    top:88px;
+}
+
+.balloons span:nth-child(1){
+    left:10%;
+    background:#ff4d6d;
+    animation-duration:12s;
+}
+
+.balloons span:nth-child(2){
+    left:30%;
+    background:#00c2ff;
+    animation-duration:15s;
+}
+
+.balloons span:nth-child(3){
+    left:50%;
+    background:#ffd700;
+    animation-duration:13s;
+}
+
+.balloons span:nth-child(4){
+    left:70%;
+    background:#8aff5c;
+    animation-duration:14s;
+}
+
+.balloons span:nth-child(5){
+    left:90%;
+    background:#ff66ff;
+    animation-duration:16s;
+}
+
+@keyframes floatBalloon{
+
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-130vh) rotate(18deg);
+opacity:0;
+}
+
+}
+
+/* Stars */
+
+.stars{
+    position:fixed;
+    inset:0;
+    background-image:
+    radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+    radial-gradient(2px 2px at 100px 120px,#fff,transparent),
+    radial-gradient(2px 2px at 240px 80px,#fff,transparent),
+    radial-gradient(3px 3px at 500px 300px,#fff,transparent),
+    radial-gradient(2px 2px at 700px 200px,#fff,transparent),
+    radial-gradient(2px 2px at 900px 450px,#fff,transparent);
+    background-size:1000px 600px;
+    animation:starsMove 35s linear infinite;
+    opacity:.8;
+}
+
+@keyframes starsMove{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(120px);
+    }
+}
+
+/* Golden Sparkles */
+
+.particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:
+    radial-gradient(circle,#ffd700 2px,transparent 3px);
+    background-size:120px 120px;
+    animation:particleMove 20s linear infinite;
+    opacity:.35;
+}
+
+@keyframes particleMove{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-150px);
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.title{
+font-size:2.4rem;
+letter-spacing:3px;
+}
+
+.name{
+font-size:3.6rem;
+}
+
+.message{
+font-size:1rem;
+line-height:28px;
+}
+
+#playBtn{
+padding:12px 28px;
+font-size:16px;
+}
+
+}
+/* =====================================
+   PREMIUM CSS - PART 3
+======================================*/
+
+/* Smooth Fade In */
+
+.container{
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+
+0%{
+opacity:0;
+transform:translate(-50%,-40%);
+}
+
+100%{
+opacity:1;
+transform:translate(-50%,-50%);
+}
+
+}
+
+/* Floating Hearts */
+
+body::after{
+content:"❤️ 💛 💖 💙 💜";
+
+position:fixed;
+
+left:-20%;
+
+bottom:-10%;
+
+font-size:28px;
+
+letter-spacing:80px;
+
+white-space:nowrap;
+
+animation:heartFly 18s linear infinite;
+
+opacity:.6;
+
+pointer-events:none;
+
+}
+
+@keyframes heartFly{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-140vh);
+
+}
+
+}
+
+/* Luxury Glow */
+
+.container::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:500px;
+
+height:500px;
+
+transform:translate(-50%,-50%);
+
+background:radial-gradient(circle,
+rgba(255,215,0,.15),
+transparent 70%);
+
+filter:blur(30px);
+
+z-index:-1;
+
+animation:pulseGlow 4s infinite;
+
+}
+
+@keyframes pulseGlow{
+
+0%,100%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.2);
+
+}
+
+}
+
+/* Shooting Star */
+
+.stars::after{
+
+content:"";
+
+position:absolute;
+
+top:20%;
+
+left:-200px;
+
+width:180px;
+
+height:2px;
+
+background:linear-gradient(90deg,#fff,transparent);
+
+box-shadow:0 0 20px white;
+
+animation:shootStar 6s linear infinite;
+
+}
+
+@keyframes shootStar{
+
+0%{
+
+transform:translateX(0) translateY(0) rotate(-20deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateX(1600px) translateY(350px) rotate(-20deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Button Animation */
+
+#playBtn{
+
+animation:buttonPulse 2s infinite;
+
+}
+
+@keyframes buttonPulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* Canvas */
+
+#fireworks{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:-1;
+
+}

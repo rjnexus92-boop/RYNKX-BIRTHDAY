@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday RYNKX</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<div class="stars"></div>
+<div class="particles"></div>
+
+<div class="container">
+
+<h1 class="title">
+Happy Birthday
+</h1>
+
+<h2 class="name">
+RYNKX
+</h2>
+
+<p class="message">
+
+May every dream become reality...
+
+May every smile stay forever...
+
+Stay Blessed ❤️
+
+</p>
+
+<button id="playBtn">
+
+Play Music 🎵
+
+</button>
+
+</div>
+
+<div class="balloons">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<audio id="music" loop>
+
+<source src="music/suniya.mp3" type="audio/mpeg">
+
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
